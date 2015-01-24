@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="AndroidTV OpenFL Example" package="nl.spip.AndroidTVOpenFLExample" version="1.0.0" company="spip.nl" />
+	<app main="Main" path="bin" file="AndroidTVOpenFLExample" />
+	
+	<source path="src" />
+	
+	<haxelib name="openfl" />
+	
+	<!-- assets -->
+	<icon path="assets/appicon.png" />
+	<assets path="assets/img" rename="img" />
+	
+</project>
