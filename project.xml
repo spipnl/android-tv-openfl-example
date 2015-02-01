@@ -4,23 +4,23 @@
 	<meta title="AndroidTV OpenFL Example" package="nl.spip.AndroidTVOpenFLExample" version="1.0.0" company="spip.nl" />
 	<app main="Main" path="bin" file="AndroidTVOpenFLExample" />
 	
-	<template path="templates/AndroidManifest.xml" rename="AndroidManifest.xml" if="android"/>
-	<android target-sdk-version="21" />
-	
 	<window background="#33363B" fps="60" />
 	<window width="960" height="540" unless="mobile" />
 	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	
+	<!-- Android TV specific settings -->
+	<template path="templates/AndroidManifest.xml" rename="AndroidManifest.xml" if="android"/>
+	<android target-sdk-version="21" />
+	<assets path="assets/appbanner.png" rename="../res/drawable-xhdpi/banner.png" if="android" />
+	<haxelib name="android-mode-type" />
+	<!-- / Android TV specific settings -->
 	
 	<source path="src" />
 	
 	<haxelib name="openfl" />
 	
-	<haxelib name="AndroidModeType" />
-	
 	<!-- assets -->
 	<icon path="assets/appicon.png" />
-	<assets path="assets/appbanner.png" rename="../res/drawable-xhdpi/banner.png" if="android" />
-	
 	
 	<assets path="assets/img" rename="img" />
 	<assets path="assets/fonts" rename="fonts" />
